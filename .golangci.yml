@@ -30,3 +30,4 @@ formatters:
 
 run:
   timeout: 5m
+

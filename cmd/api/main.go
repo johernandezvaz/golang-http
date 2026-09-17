@@ -1,3 +1,4 @@
+// Package main
 package main
 
 import "fmt"
@@ -5,4 +6,6 @@ import "fmt"
 func main() {
 	// Aqui arranca el servidor
 	fmt.Println("Servicio funcionando...")
+	fmt.Println("Hola")
+
 }
