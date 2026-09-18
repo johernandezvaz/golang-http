@@ -1,11 +1,19 @@
 // Package main
 package main
 
-import "fmt"
+import (
+	"log"
+
+	"github.com/johernandezvaz/devboard/internal/server"
+)
 
 func main() {
 	// Aqui arranca el servidor
-	fmt.Println("Servicio funcionando...")
-	fmt.Println("Hola")
+	srv := server.New(":8080")
 
+	log.Println("Servicio funcionando en :8080")
+
+	if err := srv.Start(); err != nil {
+		log.Fatalf("Error al iniciar el servidor %v", err)
+	}
 }
