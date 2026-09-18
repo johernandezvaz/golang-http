@@ -46,3 +46,16 @@ tidy:
 ## help: mostrar este menú
 help:
 	@grep -E '^##' Makefile | sed 's/## //'
+
+
+## docker-up: levantar los servicios de desarrollo
+docker-up:
+	docker compose up -d
+
+## docker-down: detener los servicios de desarrollo
+docker-down:
+	docker compose down
+
+## docker-logs: Ver logs de los servicios
+docker-logs:
+	docker compose logs -f
